@@ -209,7 +209,7 @@ int **multiplyByScalar(int **matrix_a, int rows, int columns, int scalar)
     return matrix;
 }
 
-double **multiplyByScalar(double **matrix_a, int rows, int columns, int scalar)
+double **multiplyByScalar(double **matrix_a, int rows, int columns, double scalar)
 {
     double **matrix=create_matrix_d(rows,columns);
     for(int i=0;i<rows;++i)
@@ -363,7 +363,7 @@ double determinantMatrix(double **matrix, int rows, int columns)
 
     else
     {
-        double result = 0, sign = 1;
+        double result = 0., sign = 1.;
         double **temp_matrix = nullptr;
 
         for (int i = 0; i < rows; ++i)

@@ -34,7 +34,7 @@ double **multiplyMatrix(double **matrix_a, double **matrix_b, int rows_a, int co
 
 int **multiplyByScalar(int **matrix_a, int rows, int columns, int scalar);
 
-double **multiplyByScalar(double **matrix_a, int rows, int columns, int scalar);
+double **multiplyByScalar(double **matrix_a, int rows, int columns, double scalar);
 
 int **transpozeMatrix(int **matrix_a, int rows, int columns);
 

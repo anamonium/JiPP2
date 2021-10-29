@@ -437,7 +437,7 @@ int main(int argc, char **argv)
         }
         else if(operation=="multiplyByScalar")
         {
-            int scalar;
+            double scalar;
             double **result_matrix= nullptr;
             cout<<"Podaj wartosci znajdujace sie w macierzy A : \n";
             matrix_a= create_matrix_d(rows_a,columns_a);
@@ -496,7 +496,7 @@ int main(int argc, char **argv)
         }
         else if(operation=="determinantMatrix")
         {
-            int a;
+            double a;
             cout<<"Podaj wartosci znajdujace sie w macierzy A : \n";
             matrix_a= create_matrix_d(rows_a,columns_a);
             matrix_a= fill_matrix(matrix_a,rows_a,columns_a);
