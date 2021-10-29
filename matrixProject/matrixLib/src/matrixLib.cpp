@@ -277,20 +277,20 @@ double **powerMatrix(double **matrix_a, int rows, int columns, unsigned int powe
     return matrix;
 }
 
-int **submatrix(int **matrix, int row, int column, int size)
+int **submatrix(int **matrix, int p, int q, int n)
 {
     int i = 0, j = 0;
     //tworzymy podmacierz glownej macierzy
-    int **result_matrix = create_matrix(size,size);
+    int **result_matrix = create_matrix(n,n);
 
-    for (int r = 0; r < size; ++r)
+    for (int row = 0; row < n; ++row)
     {
-        for (int c = 0; c < size; ++c)
+        for (int col = 0; col < n; ++col)
         {
-            if (r != row && c != column)
+            if (row != p && col != q)
             {
-                result_matrix[i][j++] = matrix[r][c];
-                if (j == size - 1)
+                result_matrix[i][j++] = matrix[row][col];
+                if (j == n - 1)
                 {
                     j = 0;
                     i++;
@@ -302,19 +302,19 @@ int **submatrix(int **matrix, int row, int column, int size)
     return result_matrix;
 }
 
-double **submatrix(double **matrix, int row, int column, int size)
+double **submatrix(double **matrix, int p, int q, int n)
 {
     int i = 0, j = 0;
-    double **result_matrix = create_matrix_d(size, size);
+    double **result_matrix = create_matrix_d(n, n);
     //wypelnienie podmacierzy
-    for (int r = 0; r < size; ++r)
+    for (int row = 0; row < n; ++row)
     {
-        for (int c = 0; c < size; ++c)
+        for (int col = 0; col < n; ++col)
         {
-            if (r != row && c != column)
+            if (row != p && col != q)
             {
-                result_matrix[i][j++] = matrix[r][c];
-                if (j == size - 1)
+                result_matrix[i][j++] = matrix[row][col];
+                if (j == n - 1)
                 {
                     j = 0;
                     i++;
